@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/hexagon2"
+    tools:context=".ProfileActivity">
+
+    <TextView
+        android:id="@+id/etSaludo"
+        style="@style/EditTextTextoBlanco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="8dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/btCalcularT"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btCalcularT"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
+
+    <Button
+        android:id="@+id/btCalcularT"
+        style="@style/BotonTextoBlanco"
+        android:layout_width="175dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="120dp"
+        android:onClick="gototmb"
+        android:text="Calculadora de TMB"
+        app:layout_constraintEnd_toEndOf="@+id/ivLogo"
+        app:layout_constraintHorizontal_bias="0.423"
+        app:layout_constraintStart_toStartOf="@+id/ivLogo"
+        app:layout_constraintTop_toBottomOf="@+id/etSaludo" />
+
+    <Button
+        android:id="@+id/btGym"
+        style="@style/BotonTextoBlanco"
+        android:layout_width="175dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="40dp"
+        android:onClick="gotogym"
+        android:text="Registro de entrenamiento"
+        app:layout_constraintEnd_toEndOf="@+id/btCalcularT"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btCalcularT"
+        app:layout_constraintTop_toBottomOf="@+id/btCalcularT" />
+
+    <Button
+        android:id="@+id/btDieta"
+        style="@style/BotonTextoBlanco"
+        android:layout_width="175dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="40dp"
+        android:onClick="menudb"
+        android:text="Registro Calórico"
+        app:layout_constraintEnd_toEndOf="@+id/btGym"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btGym"
+        app:layout_constraintTop_toBottomOf="@+id/btGym" />
+
+    <Button
+        android:id="@+id/logout"
+        style="@style/BotonTextoBlanco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="cerrar sesión"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btDieta"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="@+id/btDieta" />
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="385dp"
+        android:layout_height="174dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fitness_logo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

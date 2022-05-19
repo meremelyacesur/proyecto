@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Fitness+</string>
+    <string name="email">Электронный адресс</string>
+    <string name="password">Пароль</string>
+    <string name="forgot_password">Сбросить пароль</string>
+    <string name="register_user">Регистрация</string>
+    <string name="login">Вход</string>
+</resources>

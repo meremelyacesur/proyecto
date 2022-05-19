@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Fitness+</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Reset Password</string>
+    <string name="register_user">Register</string>
+    <string name="login">Login</string>
+</resources>

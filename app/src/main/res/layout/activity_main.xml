@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/hexagon2"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvPasswordLostMain"
+        style="@style/EditTextTextoBlanco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/forgot_password"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/btLoginMain"
+        app:layout_constraintTop_toBottomOf="@+id/btLoginMain" />
+
+    <TextView
+        android:id="@+id/tvRegitroMain"
+        style="@style/EditTextTextoBlanco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/register_user"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/btLoginMain"
+        app:layout_constraintTop_toBottomOf="@+id/btLoginMain" />
+
+    <EditText
+        android:id="@+id/etEmailR"
+        style="@style/EditTextTextoBlanco"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="200dp"
+        android:drawableEnd="@drawable/ic_user"
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText style="@style/EditTextTextoBlanco"
+        android:id="@+id/etPasswordR"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:drawableEnd="@drawable/ic_lock"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEmailR" />
+
+    <Button style="@style/BotonTextoBlanco"
+        android:id="@+id/btLoginMain"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPasswordR" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

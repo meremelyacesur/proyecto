@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Fitness+</string>
+    <string name="email">Correo electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="forgot_password">¿Contraseña olvidada?</string>
+    <string name="register_user">Registrar</string>
+    <string name="login">Acceder</string>
+</resources>

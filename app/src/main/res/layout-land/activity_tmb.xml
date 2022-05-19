@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/hexagon2"
+    tools:context=".tmb">
+
+    <ImageButton
+        android:id="@+id/ibInfoT"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/rgNivelT"
+        app:layout_constraintTop_toBottomOf="@+id/tv2T"
+        app:srcCompat="@drawable/ic_info" />
+
+    <Button
+        android:id="@+id/btCalcularT"
+        style="@style/BotonTextoBlanco"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#FB8C00"
+        android:text="calcular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/rgPesoT"
+        app:layout_constraintTop_toBottomOf="@+id/rgPesoT"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/etPesoT"
+        style="@style/EditTextTextoBlanco"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Introduzca su peso en kilos"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etAlturaT"
+        style="@style/EditTextTextoBlanco"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Introduzca su altura en cm"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/etPesoT"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/etPesoT"
+        app:layout_constraintTop_toBottomOf="@+id/etPesoT" />
+
+    <EditText
+        android:id="@+id/etEdadT"
+        style="@style/EditTextTextoBlanco"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Introduzca su edad"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/etAlturaT"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/etAlturaT"
+        app:layout_constraintTop_toBottomOf="@+id/etAlturaT" />
+
+    <TextView
+        android:id="@+id/tvResultadoT"
+        style="@style/EditTextTextoBlanco"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="52dp"
+        android:text="Resultado"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/btCalcularT"
+        app:layout_constraintTop_toBottomOf="@+id/rgPesoT" />
+
+    <RadioGroup
+        android:id="@+id/rgGeneroT"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@+id/etPesoT"
+        app:layout_constraintTop_toTopOf="@+id/etPesoT">
+
+
+        <RadioButton
+
+            android:id="@+id/rbMujerT"
+            style="@style/BotonTextoBlanco"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Mujer"
+            android:textColor="#FFFFFF" />
+
+        <RadioButton
+            android:id="@+id/rbHombreT"
+
+            style="@style/BotonTextoBlanco"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+
+
+            android:text="Hombre" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rgPesoT"
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="@+id/rgNivelT"
+        app:layout_constraintTop_toBottomOf="@+id/rgNivelT">
+
+        <RadioButton
+
+            android:id="@+id/rbAdelgazarT"
+            style="@style/BotonTextoBlanco"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Adelgazar" />
+
+        <RadioButton
+
+            android:id="@+id/rbMantenerT"
+            style="@style/BotonTextoBlanco"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Mantener" />
+
+        <RadioButton
+
+            android:id="@+id/rbEngordarT"
+            style="@style/BotonTextoBlanco"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Engordar" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rgNivelT"
+        android:layout_width="270dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/rgGeneroT"
+        app:layout_constraintTop_toBottomOf="@+id/rgGeneroT">
+
+        <RadioButton
+            android:id="@+id/rbBajoT"
+            style="@style/BotonTextoBlanco"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="Bajo" />
+
+        <RadioButton
+            android:id="@+id/rbMedioT"
+            style="@style/BotonTextoBlanco"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Medio" />
+
+        <RadioButton
+            android:id="@+id/rbAltoT"
+            style="@style/BotonTextoBlanco"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="Alto" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv2T"
+        style="@style/EditTextTextoBlanco"
+        android:layout_width="200dp"
+        android:layout_height="20dp"
+        android:text="¿Cual es su nuvel de actividad?"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/rgNivelT"
+        app:layout_constraintStart_toStartOf="@+id/rgNivelT" />
+
+    <TextView
+        android:id="@+id/tv3T"
+        style="@style/EditTextTextoBlanco"
+        android:layout_width="220dp"
+        android:layout_height="20dp"
+        android:text="¿Que proposito tiene con su peso?"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/rgPesoT"
+        app:layout_constraintStart_toStartOf="@+id/rgPesoT" />
+
+    <TextView
+        android:id="@+id/tv1T"
+        style="@style/EditTextTextoBlanco"
+        android:layout_width="90dp"
+        android:layout_height="20dp"
+        android:text="Escoja el sexo"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/rgGeneroT"
+        app:layout_constraintStart_toStartOf="@+id/rgGeneroT" />
+
+    <Button
+        android:id="@+id/btCargarDatosT"
+        style="@style/BotonTextoBlanco"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:text="cargar datos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/etEdadT"
+        app:layout_constraintTop_toBottomOf="@+id/etEdadT"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvKcalT"
+        style="@style/EditTextTextoBlanco"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:text="Kcal"
+        android:textAlignment="viewStart"
+        app:layout_constraintStart_toEndOf="@+id/tvResultadoT"
+        app:layout_constraintTop_toTopOf="@+id/tvResultadoT" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

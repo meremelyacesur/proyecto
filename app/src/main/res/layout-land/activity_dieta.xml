@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/hexagon2"
+    tools:context=".dieta">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btCrearM"
+                    style="@style/BotonTextoBlanco"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="30dp"
+                    android:text="Crear"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.168"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btEliminarM"
+                    style="@style/BotonTextoBlanco"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:text="Eliminar"
+                    app:layout_constraintStart_toEndOf="@+id/btCrearM"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/etNombreM"
+                    style="@style/EditTextTextoBlanco"
+                    android:layout_width="330dp"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:hint="Nombre"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center"
+                    app:layout_constraintEnd_toEndOf="@+id/btEliminarM"
+                    app:layout_constraintHorizontal_bias="0.489"
+                    app:layout_constraintStart_toStartOf="@+id/btCrearM"
+                    app:layout_constraintTop_toBottomOf="@+id/btCrearM" />
+
+                <EditText
+                    android:id="@+id/etKcal100gM"
+                    style="@style/EditTextTextoBlanco"
+                    android:layout_width="330dp"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:hint="Kcal por 100g"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    app:layout_constraintEnd_toEndOf="@+id/etNombreM"
+                    app:layout_constraintHorizontal_bias="0.488"
+                    app:layout_constraintStart_toStartOf="@+id/etNombreM"
+                    app:layout_constraintTop_toBottomOf="@+id/etNombreM" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btConsultarM"
+                    style="@style/BotonTextoBlanco"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="30dp"
+                    android:text="Consultar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.168"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btRegistrarM"
+                    style="@style/BotonTextoBlanco"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:text="Registrar"
+                    app:layout_constraintEnd_toEndOf="@+id/btEliminarM"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/btEliminarM"
+                    app:layout_constraintTop_toBottomOf="@+id/etKcal100gM" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/etGramosConsM"
+                    style="@style/EditTextTextoBlanco"
+                    android:layout_width="330dp"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:hint="Gramos consumidos"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    app:layout_constraintEnd_toEndOf="@+id/btRegistrarM"
+                    app:layout_constraintStart_toStartOf="@+id/btConsultarM"
+                    app:layout_constraintTop_toBottomOf="@+id/btConsultarM" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etKcalQuemM"
+                    style="@style/EditTextTextoBlanco"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="30dp"
+                    android:ems="10"
+                    android:hint="Kcal quemadas"
+                    android:inputType="number"
+                    app:layout_constraintStart_toStartOf="@+id/btConsultarM"
+                    app:layout_constraintTop_toBottomOf="@+id/etGramosConsM" />
+
+                <Button
+                    android:id="@+id/btApuntarM"
+                    style="@style/BotonTextoBlanco"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:text="apuntar"
+                    app:layout_constraintBottom_toBottomOf="@+id/etKcalQuemM"
+                    app:layout_constraintEnd_toEndOf="@+id/btRegistrarM"
+                    app:layout_constraintTop_toTopOf="@+id/etKcalQuemM" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/etDateM"
+                    style="@style/EditTextTextoBlanco"
+                    android:layout_width="330dp"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    app:layout_constraintEnd_toEndOf="@+id/btApuntarM"
+                    app:layout_constraintHorizontal_bias="0.489"
+                    app:layout_constraintStart_toStartOf="@+id/etKcalQuemM"
+                    app:layout_constraintTop_toBottomOf="@+id/etKcalQuemM" />
+
+                <Button
+                    android:id="@+id/btActualizarM"
+                    style="@style/BotonTextoBlanco"
+                    android:layout_width="330dp"
+                    android:layout_height="50dp"
+                    android:text="actualizar"
+                    app:layout_constraintEnd_toEndOf="@+id/btApuntarM"
+                    app:layout_constraintStart_toStartOf="@+id/etKcalQuemM"
+                    app:layout_constraintTop_toBottomOf="@+id/etDateM" />
+
+                <Button
+                    android:id="@+id/btEliminarUltimoM"
+                    style="@style/BotonTextoBlanco"
+                    android:layout_width="330dp"
+                    android:layout_height="50dp"
+                    android:text="Eliminar ultimo registro"
+                    app:layout_constraintEnd_toEndOf="@+id/btApuntarM"
+                    app:layout_constraintHorizontal_bias="0.485"
+                    app:layout_constraintStart_toStartOf="@+id/etKcalQuemM"
+                    app:layout_constraintTop_toBottomOf="@+id/btActualizarM" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etKcalAcumuladoM"
+                    style="@style/EditTextTextoBlanco"
+                    android:layout_width="150dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    android:clickable="false"
+                    android:editable="false"
+                    android:ems="10"
+                    android:hint="Consumido Kcal"
+                    android:inputType="none"
+                    android:textAlignment="center"
+                    app:layout_constraintEnd_toEndOf="@+id/btApuntarM"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/etKcalQuemM"
+                    app:layout_constraintTop_toBottomOf="@+id/btEliminarUltimoM" />
+
+                <EditText
+                    android:id="@+id/etKcalLimiteM"
+                    style="@style/EditTextTextoBlanco"
+                    android:layout_width="150dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:clickable="false"
+                    android:editable="false"
+                    android:ems="10"
+                    android:hint="Limite Kcal"
+                    android:inputType="none"
+                    android:textAlignment="center"
+                    app:layout_constraintEnd_toEndOf="@+id/btApuntarM"
+                    app:layout_constraintTop_toBottomOf="@+id/btEliminarUltimoM" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

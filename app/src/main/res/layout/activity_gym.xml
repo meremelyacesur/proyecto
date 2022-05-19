@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/hexagon2"
+    tools:context=".gym">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <CalendarView
+                android:id="@+id/calendarViewGym"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:dateTextAppearance="@style/EditTextTextoBlanco"
+                android:firstDayOfWeek="2"
+                android:weekDayTextAppearance="@style/EditTextTextoBlanco" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btCalcularT"
+                    style="@style/BotonTextoBlanco"
+                    android:layout_width="120dp"
+                    android:layout_height="48dp"
+                    android:text="Guardar" />
+
+                <EditText
+                    android:id="@+id/etDateGym"
+                    android:layout_width="52dp"
+                    android:layout_height="21dp"
+                    android:ems="10"
+                    android:inputType="date"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/btRecuperarGym"
+                    style="@style/BotonTextoBlanco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recuperar" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etDiarioGym"
+                style="@style/EditTextTextoBlanco"
+                android:layout_width="match_parent"
+                android:layout_height="340dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
